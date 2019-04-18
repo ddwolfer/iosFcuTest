@@ -1,0 +1,24 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Test03_FB' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Test03_FB
+
+  target 'Test03_FBTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Test03_FBUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+pod 'FBSDKCoreKit'
+pod 'FBSDKLoginKit'
+pod 'FBSDKShareKit'
+
+end

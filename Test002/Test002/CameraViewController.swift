@@ -10,8 +10,9 @@ import UIKit
 import AVFoundation
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
-    var cameraFlag = 0
+    
+    var cameraFlag = 0 //判斷是開相機還是拍照
+    
     @IBOutlet weak var showImage: UIImageView!
     
     override func viewDidLoad() {

@@ -52,14 +52,19 @@ class CameraController : UIViewController, UIImagePickerControllerDelegate, UINa
         dismiss(animated: true, completion: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var editPhotoController = segue.destination as! EditPhotoController
+        editPhotoController.getPhoto = tempImage
+        
+    }
     
     @IBAction func sureToSave(_ sender: Any) {
-        UIImageWriteToSavedPhotosAlbum(tempImage, nil, nil, nil)
-        let alertController = UIAlertController(title: "提示", message: "照片已儲存", preferredStyle: .alert)
-        let exitBtn = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(exitBtn)
+        //UIImageWriteToSavedPhotosAlbum(tempImage, nil, nil, nil)
+        //let alertController = UIAlertController(title: "提示", message: "照片已儲存", preferredStyle: .alert)
+        //let exitBtn = UIAlertAction(title: "OK", style: .default, handler: nil)
+        //alertController.addAction(exitBtn)
         
-        present(alertController, animated: true,completion: nil)
+        //present(alertController, animated: true,completion: nil)
         
         
     }

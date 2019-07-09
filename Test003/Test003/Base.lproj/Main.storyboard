@@ -81,9 +81,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNZ-jH-XSr">
                                 <rect key="frame" x="49" y="571" width="85" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="確定並儲存"/>
+                                <state key="normal" title="確定"/>
                                 <connections>
                                     <action selector="sureToSave:" destination="Wo6-VS-bqX" eventType="touchUpInside" id="fxo-Xc-9sq"/>
+                                    <segue destination="wzR-bA-T9l" kind="show" identifier="segue" id="kN9-Xn-21o"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4H-cB-ezO">
@@ -135,6 +136,9 @@
                                 <rect key="frame" x="60" y="581" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="確定"/>
+                                <connections>
+                                    <segue destination="wzR-bA-T9l" kind="show" identifier="segue" id="1WK-Xb-Apf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3la-QI-wTn">
                                 <rect key="frame" x="258" y="581" width="73" height="30"/>
@@ -145,7 +149,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Do4-oI-rVk">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="676"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -161,6 +165,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7MD-yb-wBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1037.5999999999999" y="907.1964017991005"/>
+        </scene>
+        <!--Edit Photo Controller-->
+        <scene sceneID="Vx1-PZ-7rY">
+            <objects>
+                <viewController id="wzR-bA-T9l" customClass="EditPhotoController" customModule="Test003" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QQS-9u-X6p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="在這裡加工照片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzd-KV-tPN">
+                                <rect key="frame" x="126" y="545" width="122" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AOe-GT-cM0">
+                                <rect key="frame" x="-3" y="125" width="380" height="380"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Pgo-sS-Jc9"/>
+                    </view>
+                    <connections>
+                        <outlet property="showPhoto" destination="AOe-GT-cM0" id="bv4-WN-iQn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LW6-p7-Mn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1960.8" y="906.29685157421295"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uy7-DU-9gS">
@@ -181,4 +216,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="138.58695652173915"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="kN9-Xn-21o"/>
+    </inferredMetricsTieBreakers>
 </document>

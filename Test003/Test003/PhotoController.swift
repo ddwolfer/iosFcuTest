@@ -11,6 +11,8 @@ import UIKit
 
 class PhotoController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIActionSheetDelegate{
     
+    var tempImage : UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let imageAlbum = UIImagePickerController() //生成相簿的Controller
@@ -37,11 +39,16 @@ class PhotoController : UIViewController, UIImagePickerControllerDelegate, UINav
         //如果有照片
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             imageShow.contentMode = .scaleToFill //不知道幹嘛的 好像可以刪掉
-            
             imageShow.image = pickedImage.crop(ratio: 1) //畫面上的空白View = 剛剛接受到的圖片
+            tempImage = imageShow.image
         }
         blockView.isHidden = true  //把黑色背景去掉
         dismiss(animated: true, completion: nil) //關掉選取畫面
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var editPhotoController = segue.destination as! EditPhotoController
+        editPhotoController.getPhoto = tempImage
     }
     
 }

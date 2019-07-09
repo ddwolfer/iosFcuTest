@@ -17,6 +17,7 @@
 		863AFC61229C2F3500F5548F /* Test003UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863AFC60229C2F3500F5548F /* Test003UITests.swift */; };
 		863AFC6F229C368D00F5548F /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863AFC6E229C368D00F5548F /* CameraController.swift */; };
 		863AFC71229C379800F5548F /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863AFC70229C379800F5548F /* PhotoController.swift */; };
+		863AFC7322A5749F00F5548F /* EditPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863AFC7222A5749F00F5548F /* EditPhotoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		863AFC62229C2F3500F5548F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		863AFC6E229C368D00F5548F /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		863AFC70229C379800F5548F /* PhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
+		863AFC7222A5749F00F5548F /* EditPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				863AFC44229C2F3400F5548F /* Test003.xcdatamodeld */,
 				863AFC6E229C368D00F5548F /* CameraController.swift */,
 				863AFC70229C379800F5548F /* PhotoController.swift */,
+				863AFC7222A5749F00F5548F /* EditPhotoController.swift */,
 			);
 			path = Test003;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				863AFC40229C2F3400F5548F /* ViewController.swift in Sources */,
 				863AFC3E229C2F3400F5548F /* AppDelegate.swift in Sources */,
 				863AFC6F229C368D00F5548F /* CameraController.swift in Sources */,
+				863AFC7322A5749F00F5548F /* EditPhotoController.swift in Sources */,
 				863AFC46229C2F3400F5548F /* Test003.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4VJ9Z2BDSH;
 				INFOPLIST_FILE = Test003/Info.plist;
@@ -454,7 +459,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddwolf.Test003;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -462,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4VJ9Z2BDSH;
 				INFOPLIST_FILE = Test003/Info.plist;
@@ -472,7 +478,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddwolf.Test003;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

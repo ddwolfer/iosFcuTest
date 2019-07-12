@@ -16,11 +16,13 @@ class CameraController : UIViewController, UIImagePickerControllerDelegate, UINa
     @IBOutlet weak var showImage: UIImageView!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         let imagePicker = UIImagePickerController() //生成相機的Controller
         imagePicker.sourceType = .camera //設定來源為相機（這個contro用相機）
         imagePicker.delegate = self //self 跟view連結？嗎？
-        imagePicker.allowsEditing = true //允許客製化設定
+        //imagePicker.allowsEditing = true //允許客製化設定
         
         present(imagePicker, animated: true, completion: nil) //在view上顯示        // Do any additional setup after loading the view.
     }
@@ -45,9 +47,6 @@ class CameraController : UIViewController, UIImagePickerControllerDelegate, UINa
             showImage.image = pickedImage //畫面上的空白View = 剛剛接受到的圖片
             tempImage = pickedImage
             blockView.isHidden = true
-//            if cameraFlag == 0{ //如果是拍照得來的圖片就儲存(因為開相簿也會觸發到,如果多重觸發就會變成一堆照片)
-//                UIImageWriteToSavedPhotosAlbum(pickedImage, nil, nil, nil) //儲存
-//            }
         }
         dismiss(animated: true, completion: nil)
     }
